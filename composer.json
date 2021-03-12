@@ -1,0 +1,26 @@
+{
+  "name": "jhuliocastro/castro",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jhúlio Castro",
+      "email": "jhuliocastro@hotmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Models\\": "sources/Models",
+      "App\\": "sources/App"
+    },
+    "files": [
+      "sources/Config.php"
+    ]
+  },
+  "require": {
+    "coffeecode/router": "^1.0",
+    "league/plates": "^3.4",
+    "stonks/datalayer": "^1.0",
+    "jhuliocastro/alertas": "^1.0"
+  }
+}
