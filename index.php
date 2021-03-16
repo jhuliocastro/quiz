@@ -19,6 +19,12 @@ $router->get("/", "Quiz:quiz");
 $router->post("/adicionar", "Quiz:adicionar");
 
 /*
+ * QUESTIONARIOS
+ */
+$router->group("questionarios");
+$router->get("/{id}", "Questionarios:home");
+
+/*
  * ERROS
  */
 $router->group("error");
