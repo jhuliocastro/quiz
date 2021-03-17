@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
 require __DIR__."/vendor/autoload.php";
 
 use CoffeeCode\Router\Router;
@@ -23,6 +26,7 @@ $router->post("/adicionar", "Quiz:adicionar");
  */
 $router->group("questionarios");
 $router->get("/{id}", "Questionarios:home");
+$router->get("/cadastrar/{questionario}", "Questionarios:cadastrar");
 
 /*
  * ERROS
