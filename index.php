@@ -27,6 +27,7 @@ $router->post("/adicionar", "Quiz:adicionar");
 $router->group("questionarios");
 $router->get("/{id}", "Questionarios:home");
 $router->get("/cadastrar/{questionario}", "Questionarios:cadastrar");
+$router->post("/cadastrar", "Questionarios:cadastrarSender");
 
 /*
  * ERROS

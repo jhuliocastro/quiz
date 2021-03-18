@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "497aa997c1ece2a1d68856635573b763",
+    "content-hash": "8c3fc0ac0395d93966377fd03773e006",
     "packages": [
         {
             "name": "coffeecode/router",
@@ -53,16 +53,16 @@
         },
         {
             "name": "jhuliocastro/alertas",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jhuliocastro/sweet-alert.git",
-                "reference": "350c198caf08546d7b4aff704df8af0962ab543e"
+                "reference": "f25edc853fa24b6e82ccf00f0c82a24f812aff11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jhuliocastro/sweet-alert/zipball/350c198caf08546d7b4aff704df8af0962ab543e",
-                "reference": "350c198caf08546d7b4aff704df8af0962ab543e",
+                "url": "https://api.github.com/repos/jhuliocastro/sweet-alert/zipball/f25edc853fa24b6e82ccf00f0c82a24f812aff11",
+                "reference": "f25edc853fa24b6e82ccf00f0c82a24f812aff11",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
                     "email": "jhuliocastro@hotmail.com"
                 }
             ],
-            "time": "2021-03-02T18:54:37+00:00"
+            "time": "2021-03-18T17:16:08+00:00"
         },
         {
             "name": "league/plates",

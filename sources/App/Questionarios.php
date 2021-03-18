@@ -2,6 +2,7 @@
 namespace App;
 
 use Models\Questionarios_Model;
+use Alertas\Alert;
 
 class Questionarios extends Controller{
     public function __construct($router)
@@ -10,7 +11,18 @@ class Questionarios extends Controller{
     }
 
     public function cadastrar($data){
-        var_dump($data);
+        parent::render("cadastrarQuestionario", ["questionario" => $data["questionario"]]);
+    }
+
+    public function cadastrarSender(){
+       $questionariosModel = new Questionarios_Model();
+       $retorno = $questionariosModel->cadastrar($_POST);
+       $caminho = "/questionarios/".$_POST["questionario"];
+       if($retorno == false):
+            Alert::error("Erro ao realizar cadastro!", "Consulte o log para mais informações", $caminho);
+            die();
+       endif;
+       Alert::success("Cadastrado com sucesso!", "", $caminho);
     }
 
     public function home($data){
