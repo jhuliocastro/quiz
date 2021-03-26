@@ -10,6 +10,7 @@ $router = new Router(URL_BASE);
 
 $router->namespace("App");
 
+$router->get("/", "Cliente:selecaoQuiz");
 $router->get("/admin", "Admin:home");
 $router->post("/login", "Admin:login");
 $router->get("/dashboard", "Dashboard:home", "dashboard");

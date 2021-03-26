@@ -8,20 +8,20 @@
     "packages": [
         {
             "name": "coffeecode/router",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsonvleite/router.git",
-                "reference": "e3b94f72bc389e8b97d82a0fd0e5bff743e51667"
+                "reference": "29f73e12351a116e9bbb3f695595777a09e18077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsonvleite/router/zipball/e3b94f72bc389e8b97d82a0fd0e5bff743e51667",
-                "reference": "e3b94f72bc389e8b97d82a0fd0e5bff743e51667",
+                "url": "https://api.github.com/repos/robsonvleite/router/zipball/29f73e12351a116e9bbb3f695595777a09e18077",
+                "reference": "29f73e12351a116e9bbb3f695595777a09e18077",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2"
+                "php": ">=7.2"
             },
             "type": "library",
             "autoload": {
@@ -49,7 +49,11 @@
                 "routes",
                 "upinside"
             ],
-            "time": "2019-09-30T16:29:47+00:00"
+            "support": {
+                "issues": "https://github.com/robsonvleite/router/issues",
+                "source": "https://github.com/robsonvleite/router/tree/1.0.8"
+            },
+            "time": "2021-03-21T18:45:16+00:00"
         },
         {
             "name": "jhuliocastro/alertas",
@@ -84,6 +88,10 @@
                     "email": "jhuliocastro@hotmail.com"
                 }
             ],
+            "support": {
+                "issues": "https://github.com/jhuliocastro/sweet-alert/issues",
+                "source": "https://github.com/jhuliocastro/sweet-alert/tree/v1.0.2"
+            },
             "time": "2021-03-18T17:16:08+00:00"
         },
         {
@@ -144,6 +152,10 @@
                 "templating",
                 "views"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/plates/issues",
+                "source": "https://github.com/thephpleague/plates/tree/v3.4.0"
+            },
             "time": "2020-12-25T05:00:37+00:00"
         },
         {
@@ -193,6 +205,10 @@
                 "pdo",
                 "save"
             ],
+            "support": {
+                "issues": "https://github.com/giovannialo/datalayer/issues",
+                "source": "https://github.com/giovannialo/datalayer/tree/1.0.2"
+            },
             "time": "2021-01-29T03:27:19+00:00"
         }
     ],
@@ -203,5 +219,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
