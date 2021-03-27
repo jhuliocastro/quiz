@@ -7,6 +7,6 @@ class Cliente extends Controller{
     }
 
     public function selecaoQuiz(){
-        //parent::render("selecaoQuiz");
+        parent::render("selecaoQuiz");
     }
 }
