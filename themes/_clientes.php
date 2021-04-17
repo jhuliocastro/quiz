@@ -25,10 +25,23 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+        .linha2{
+            background-color: gray;
+            border: 2px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            color: black;
+        }
     </style>
   </head>
   <body>    
     <?=$this->section('content')?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <?=$this->section('scripts')?>
   </body>
 </html>

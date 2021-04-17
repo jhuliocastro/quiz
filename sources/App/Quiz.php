@@ -10,6 +10,14 @@ class Quiz extends Controller{
         $this->router = $router;
     }
 
+    public function iniciar(){
+        var_dump($_POST);
+        session_start();
+        $_SESSION["cliente"] = $_POST["nome"];
+        $_SESSION["quiz"] = $_POST["quiz"];
+        var_dump($_SESSION);
+    }
+
     public function quiz(){
         parent::render("quiz", [
             "tabela" => $this->tabela()

@@ -7,7 +7,7 @@ define("COPYRIGHT", "2021");
 define('DATA_LAYER_CONFIG', [
     'interno' => [
         'driver' => 'mysql',
-        'host' => '45.164.81.42',
+        'host' => '187.60.246.252',
         'port' => '3306',
         'dbname' => 'quiz',
         'username' => 'sispro',

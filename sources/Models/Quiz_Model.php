@@ -27,4 +27,8 @@ class Quiz_Model extends DataLayer
     public function listaDescrecente(){
         return $this->find()->order("id DESC")->fetch(true);
     }
+
+    public function lista(){
+        return $this->find()->order("titulo ASC")->fetch(true);
+    }
 }
