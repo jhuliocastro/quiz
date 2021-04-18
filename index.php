@@ -22,6 +22,7 @@ $router->group("quiz");
 $router->get("/", "Quiz:quiz");
 $router->post("/adicionar", "Quiz:adicionar");
 $router->post("/iniciar", "Quiz:iniciar");
+$router->get("/questionarios", "Quiz:inicio");
 
 /*
  * QUESTIONARIOS

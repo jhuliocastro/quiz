@@ -20,6 +20,10 @@ class Quiz_Model extends DataLayer
         endif;
     }
 
+    public function dadosID($quiz){
+        return ($this)->find("titulo=:titulo", "titulo=$quiz")->fetch();
+    }
+
     public function quant($titulo){
         return ($this)->find("titulo=:titulo", "titulo=$titulo")->count();
     }

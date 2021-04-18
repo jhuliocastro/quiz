@@ -21,6 +21,7 @@
     "coffeecode/router": "^1.0",
     "league/plates": "^3.4",
     "stonks/datalayer": "^1.0",
-    "jhuliocastro/alertas": "^1.0.2"
+    "jhuliocastro/alertas": "^1.0.2",
+    "symfony/var-dumper": "^5.2"
   }
 }

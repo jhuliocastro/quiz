@@ -1,5 +1,5 @@
 <?php
-define("URL_BASE", "http://localhost");
+define("URL_BASE", "http://cronos/");
 define("NOME_EMPRESA", "NOVA NET TELECOM");
 define("VERSAO", "1.0.1");
 define("COPYRIGHT", "2021");

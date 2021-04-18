@@ -2,6 +2,7 @@
 namespace App;
 
 use Alertas\Alert;
+use Models\Questionarios_Model;
 use Models\Quiz_Model;
 
 class Quiz extends Controller{
@@ -11,11 +12,19 @@ class Quiz extends Controller{
     }
 
     public function iniciar(){
-        var_dump($_POST);
+        $quizModel = new Quiz_Model();
+        $retorno = $quizModel->dadosID($_POST["quiz"]);
         session_start();
         $_SESSION["cliente"] = $_POST["nome"];
-        $_SESSION["quiz"] = $_POST["quiz"];
-        var_dump($_SESSION);
+        $_SESSION["quiz"] = $retorno->id;
+        $this->router->redirect("/quiz/questionarios");
+    }
+
+    public function inicio(){
+        session_start();
+        $questionarioModel = new Questionarios_Model();
+        $questionarios = $questionarioModel->listaID($_SESSION["quiz"]);
+        dump($questionarios);
     }
 
     public function quiz(){
