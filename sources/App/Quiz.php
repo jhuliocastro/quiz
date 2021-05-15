@@ -22,9 +22,67 @@ class Quiz extends Controller{
 
     public function inicio(){
         session_start();
+        if(isset($_SESSION["questionarios"])):
+            unset($_SESSION["questionarios"]);
+        endif;
         $questionarioModel = new Questionarios_Model();
         $questionarios = $questionarioModel->listaID($_SESSION["quiz"]);
-        dump($questionarios);
+        if($questionarios == null):
+            Alert::warning("Questionario Vazio!", "Contate o Administrador do Sistema", "/");
+        else:
+            $i = 0;
+            foreach ($questionarios as $d):
+                $_SESSION["questionarios"][$i]["titulo"] = $d->titulo;
+                $_SESSION["questionarios"][$i]["alternativa_a"] = $d->alternativa_a;
+                $_SESSION["questionarios"][$i]["alternativa_b"] = $d->alternativa_b;
+                $_SESSION["questionarios"][$i]["alternativa_c"] = $d->alternativa_c;
+                $_SESSION["questionarios"][$i]["alternativa_d"] = $d->alternativa_d;
+                $_SESSION["questionarios"][$i]["alternativa_correta"] = $d->alternativa_correta;
+                $_SESSION["questionarios"][$i]["respondeu"] = 0;
+                $_SESSION["questionarios"][$i]["alternativa_respondeu"] = "";
+                $i++;
+            endforeach;
+            $_SESSION["nQuestionarios"] = count($_SESSION["questionarios"]);
+            $_SESSION["quantRespondida"] = 0;
+            $this->router->redirect("/quiz/questionarios/iniciar");
+        endif;
+    }
+
+    public function inicio2(){
+        session_start();
+        $nQuestionarios = $_SESSION["nQuestionarios"] - 1;
+        if($_SESSION["quantRespondida"] == $nQuestionarios):
+            $this->router->redirect("/quiz/resultado");
+        endif;
+        $i = 0;
+        do{
+            $quest = rand(0, $nQuestionarios);
+            if($_SESSION["questionarios"][$quest]["respondeu"] == 0):
+                $i++;
+            endif;
+        }while($i == 0);
+
+        parent::render("inicioQuestionario", [
+            "titulo" => $_SESSION["questionarios"][$quest]["titulo"],
+            "alternativa_a" => $_SESSION["questionarios"][$quest]["alternativa_a"],
+            "alternativa_b" => $_SESSION["questionarios"][$quest]["alternativa_b"],
+            "alternativa_c" => $_SESSION["questionarios"][$quest]["alternativa_c"],
+            "alternativa_d" => $_SESSION["questionarios"][$quest]["alternativa_d"],
+            "quest" => $quest
+        ]);
+    }
+
+    public function selecao($data){
+        session_start();
+        $_SESSION["questionarios"][$data["questionario"]]["respondeu"] = 1;
+        $_SESSION["questionarios"][$data["questionario"]]["alternativa_respondeu"] = $data["alternativa"];
+        $_SESSION["quantRespondida"]++;
+        $this->router->redirect("/quiz/questionarios/iniciar");
+    }
+
+    public function resultado(){
+        session_start();
+        dump($_SESSION);
     }
 
     public function quiz(){

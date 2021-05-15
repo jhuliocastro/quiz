@@ -23,6 +23,9 @@ $router->get("/", "Quiz:quiz");
 $router->post("/adicionar", "Quiz:adicionar");
 $router->post("/iniciar", "Quiz:iniciar");
 $router->get("/questionarios", "Quiz:inicio");
+$router->get("/questionarios/iniciar", "Quiz:inicio2");
+$router->get("/selecao/{alternativa}/{questionario}", "Quiz:selecao");
+$router->get("/resultado", "Quiz:resultado");
 
 /*
  * QUESTIONARIOS

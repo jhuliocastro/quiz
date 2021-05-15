@@ -1,13 +1,24 @@
-<?php $this->layout('_clientes', ["title" => 'Seleção de Quiz']); ?>
+<?php $this->layout('_clientes', ["title" => 'Seleção de Quiz']);?>
 <div class="container">
     <div class="row">
         <div class="linha1" style="font-size: 25px;">
-            SELECIONE UM QUIZ
+            <?= $titulo ?>
         </div>
     </div>
     <div class="row">
         <div class="alternativas">
-            <?= $quiz ?>
+            <div class='linha2' onclick="window.location.href='/quiz/selecao/a/<?= $quest ?>'">
+                <?= $alternativa_a ?>
+            </div>
+            <div class='linha2' onclick="window.location.href='/quiz/selecao/b/<?= $quest ?>'">
+                <?= $alternativa_b ?>
+            </div>
+            <div class='linha2' onclick="window.location.href='/quiz/selecao/c/<?= $quest ?>'">
+                <?= $alternativa_c ?>
+            </div>
+            <div class='linha2' onclick="window.location.href='/quiz/selecao/d/<?= $quest ?>'">
+                <?= $alternativa_d ?>
+            </div>
         </div>
     </div>
 </div>
